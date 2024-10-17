@@ -12,35 +12,33 @@ const ContainerStyled = styled.div`
   justify-content: center;
   min-height: 100vh;
   background: radial-gradient(ellipse at top right, rgba(40, 40, 30, 0.3) 0%, rgba(26, 26, 26, 0) 70%), #1a1a1a;
-  padding: 20px;
+  padding: 1rem;
   box-sizing: border-box;
   font-size: 24px;
   overflow-x: hidden;
   padding-bottom: 150px; // Add this line to move content up
 
   @media (max-width: 768px) {
-    font-size: 18px;
-    padding: 10px;
+    padding: 0.5rem;
   }
 `;
 
 const AnswerStyled = styled.div`
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: bold;
-  margin-top: 60px;
+  margin-top: 3rem;
   text-align: center;
   color: #ffffff;
 
   @media (max-width: 768px) {
-    font-size: 28px;
-    margin-top: 40px;
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
 `;
 
 function App() {
   const [showAnswer, setShowAnswer] = useState(false);
   const [fireworks, setFireworks] = useState([]);
-
 
   const createFirework = () => {
     const colors = ['#ff0', '#f0f', '#0ff', '#0f0', '#ff5500', '#ffd700'];

@@ -36,21 +36,27 @@ const gleamAnimation = keyframes`
 export const FormContainer = styled.div`
   display: flex;
   width: 100%;
-  max-width: 1500px;
+  max-width: 60%;
   background-color: rgba(42, 42, 42, 0.8);
   border-radius: 35px;
   overflow: visible;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  margin: 0 auto;
 
+  @media (max-width: 1308px) {
+    max-width: 80%;
+    border-radius: 20px;
+  }
   @media (max-width: 768px) {
-    border-radius: 25px;
+    max-width: 92%;
+    border-radius: 20px;
   }
 `;
 
 export const Input = styled.input`
   flex-grow: 1;
-  padding: 30px 40px;
-  font-size: 32px;
+  padding: 2rem;
+  font-size: 1.5rem;
   border: none;
   background-color: transparent;
   color: #ffffff;
@@ -64,14 +70,14 @@ export const Input = styled.input`
   }
 
   @media (max-width: 768px) {
-    padding: 20px;
-    font-size: 24px;
+    font-size: 1.2rem;
+    padding: 1.5rem;
   }
 `;
 
 export const Button = styled.button`
-  padding: 30px 60px;
-  font-size: 36px;
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: white;
   background: linear-gradient(45deg, #FFA500, #FF6347, #FF4500);
@@ -93,37 +99,34 @@ export const Button = styled.button`
   }
 
   @media (max-width: 768px) {
-    padding: 30px;
-    font-size: 24px;
-  }
-
-  @media (max-width: 480px) {
-    padding: 15px 30px;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 0 20px 20px 0;
   }
 `;
 
 export const Answer = styled.div`
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: bold;
-  margin-top: 60px;
+  margin-top: 3rem;
   text-align: center;
   animation: ${fadeIn} 1s ease-in;
   color: #ffffff;
 
   @media (max-width: 768px) {
-    font-size: 28px;
-    margin-top: 40px;
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
 `;
 
 export const ErrorMessage = styled.div`
   color: #FF4500;
-  margin-top: 20px;
-  font-size: 24px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 1rem;
   }
 `;
 
@@ -147,20 +150,28 @@ export const Firework = styled.div`
 
 export const MottoContainer = styled.div`
   text-align: left;
-  height: 60px;
-  margin-bottom: 280px;
-  margin-left: 580px;
+  height: 210px;
+  margin-bottom: 9rem;
   width: 100%;
-  max-width: 1500px;
+  max-width: 90%;
+  padding-left: 20%;
+
+  @media (max-width: 1308px) {
+    margin-bottom: 4rem;
+    padding-left: 5%;
+  }
+  @media (max-width: 768px) {
+    padding-left: 0%;
+  }
 `;
 
 export const AnimatedMotto = styled.div`
   display: inline-block;
-  white-space: nowrap;
+  white-space: pre-wrap;
   margin: 0;
   letter-spacing: 0.05em;
   font-weight: 900;
-  font-size: 48px;
+  font-size: 3.5rem;
   background: linear-gradient(
     70deg,
     #FFA500 0%,
@@ -174,7 +185,15 @@ export const AnimatedMotto = styled.div`
   -webkit-background-clip: text;
   background-clip: text;
   animation: ${gleamAnimation} 4s linear infinite;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  @media (max-width: 1308px) {
+    margin-bottom: 4rem;
+    font-size:  3rem;
+  }
+  @media (max-width: 768px) {
+    font-size:  2.5rem;
+  }
 `;
-
-
 
